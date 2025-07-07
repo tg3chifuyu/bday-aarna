@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Heart Game</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #ffe6e6;
+      font-family: sans-serif;
+    }
+    #heart-btn {
+      font-size: 2rem;
+      margin: 40px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #score { font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>❤️ Heart Click Game</h1>
+  <p>Click jitna zyada karegi, utna zyada pyaar milega 😍</p>
+  <button id="heart-btn">❤️ Click Me</button>
+  <p id="score">Pyaar: 0%</p>
+  <script>
+    let score = 0;
+    document.getElementById("heart-btn").addEventListener("click", () => {
+      score++;
+      document.getElementById("score").innerText = `Pyaar: ${score}%`;
+    });
+  </script>
+</body>
+</html>
